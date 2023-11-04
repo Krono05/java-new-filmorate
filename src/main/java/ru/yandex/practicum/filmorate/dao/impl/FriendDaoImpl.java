@@ -82,7 +82,7 @@ public class FriendDaoImpl implements FriendDao {
 
     @Override
     public List<User> findCommonFriends(int id, int friendId) {
-        String sqlQuery = "SELECT u.* " +
+        String sqlQuery = "SELECT * " +
                 "FROM users u " +
                 "JOIN (" +
                 "    SELECT user_id2 AS friend_id FROM friends WHERE user_id1 = ? AND user_id2 != ? " +
